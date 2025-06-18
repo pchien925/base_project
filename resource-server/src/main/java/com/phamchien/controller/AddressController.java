@@ -33,7 +33,8 @@ public class AddressController extends ABasicController {
 
     @Autowired
     private AddressRepository addressRepository;
-    @Autowired(required = false)
+
+    @Autowired
     private AddressMapper addressMapper;
     @Autowired
     private NationRepository nationRepository;

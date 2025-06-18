@@ -33,10 +33,10 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
-    @Autowired(required = false)
-    private UserMapper userMapper;
+
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    private UserMapper userMapper;
+
     @Autowired
     private AddressRepository addressRepository;
 
@@ -130,9 +130,4 @@ public class UserController {
         apiMessageDto.setMessage("update success");
         return apiMessageDto;
     }
-
-
-
-
-
 }

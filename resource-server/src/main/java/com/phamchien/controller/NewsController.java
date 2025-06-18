@@ -35,7 +35,8 @@ import java.util.Objects;
 public class NewsController {
     @Autowired
     private NewsRepository newsRepository;
-    @Autowired(required = false)
+
+    @Autowired
     private NewsMapper newsMapper;
     @Autowired
     private CategoryRepository categoryRepository;

@@ -33,7 +33,7 @@ public class SettingsController extends ABasicController{
     @Autowired
     SettingsRepository settingsRepository;
 
-    @Autowired(required = false)
+    @Autowired
     SettingsMapper settingsMapper;
 
     @GetMapping(value = "/get/{id}", produces = MediaType.APPLICATION_JSON_VALUE)

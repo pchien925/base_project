@@ -34,7 +34,7 @@ public class CategoryController extends ABasicController {
     @Autowired
     CategoryRepository categoryRepository;
 
-    @Autowired(required = false)
+    @Autowired
     CategoryMapper categoryMapper;
 
     @Autowired

@@ -9,6 +9,7 @@ import com.phamchien.repository.GroupRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -156,7 +157,7 @@ public class UserServiceImpl implements UserDetailsService {
         }
 
         boolean enabled = true;
-        if (user.getStatus() != 1) {
+        if (user.getStatus() != UserBaseConstant.STATUS_ACTIVE) {
             log.error("User had been locked");
             enabled = false;
         }

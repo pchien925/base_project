@@ -12,21 +12,11 @@ import org.springframework.security.oauth2.provider.authentication.OAuth2Authent
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Transactional
 @Service(value = "userService")
 @Slf4j
 public class UserServiceImpl {
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
-
-
-    @Autowired
-    private UserRepository userRepository;
-
-
     public UserBaseJwt getAddInfoFromToken() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)) {

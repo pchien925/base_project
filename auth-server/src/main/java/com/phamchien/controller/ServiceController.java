@@ -53,7 +53,7 @@ public class ServiceController extends ABasicController{
     @Autowired
     DataSource dataSource;
 
-    @Autowired(required = false)
+    @Autowired
     ServiceMapper serviceMapper;
 
     @Autowired

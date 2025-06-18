@@ -48,14 +48,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         return new JwtTokenStore(jwtAccessTokenConverter());
     }
 
-//    @Bean
-//    @Primary
-//    public DefaultTokenServices createTokenServices(){
-//        DefaultTokenServices defaultTokenServices = new DefaultTokenServices();
-//        defaultTokenServices.setTokenStore(new JwtTokenStore(jwtAccessTokenConverter()));
-//        return defaultTokenServices;
-//    }
-
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.addFilterAfter(jsonFilter, BasicAuthenticationFilter.class)

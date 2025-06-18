@@ -47,10 +47,11 @@ public class AccountController extends ABasicController{
 
     @Autowired
     AccountRepository accountRepository;
+
     @Autowired
     GroupRepository groupRepository;
 
-    @Autowired(required = false)
+    @Autowired
     AccountMapper accountMapper;
 
     @Autowired

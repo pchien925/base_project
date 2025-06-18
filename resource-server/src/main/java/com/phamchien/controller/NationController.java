@@ -41,7 +41,7 @@ public class NationController extends ABasicController{
     @Autowired
     NationRepository nationRepository;
 
-    @Autowired(required = false)
+    @Autowired
     NationMapper nationMapper;
 
     @Autowired
