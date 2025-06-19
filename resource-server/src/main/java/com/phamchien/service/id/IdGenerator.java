@@ -12,7 +12,7 @@ public class IdGenerator implements IdentifierGenerator {
     @Override
     public Serializable generate(SharedSessionContractImplementor sharedSessionContractImplementor, Object o) throws HibernateException {
         try{
-            ReuseId reuseId = (ReuseId) o;
+            ReuseId<Long> reuseId = (ReuseId) o;
             if(reuseId.getReusedId()!=null){
                 return reuseId.getReusedId();
             }

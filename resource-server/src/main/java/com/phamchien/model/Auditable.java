@@ -14,7 +14,7 @@ import java.util.Date;
 @MappedSuperclass
 @Getter
 @Setter
-public abstract class Auditable<T> extends ReuseId {
+public abstract class Auditable<T, U> extends ReuseId<U> {
 
     @CreatedBy
     @Column(name = "created_by" ,nullable = false, updatable = false)

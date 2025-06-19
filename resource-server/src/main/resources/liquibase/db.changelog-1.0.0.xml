@@ -10,7 +10,6 @@
             <column name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="db_user_base_addressPK"/>
             </column>
-            <!-- Thêm user_id trực tiếp từ file 2 -->
             <column name="user_id" type="bigint"/>
             <column name="address" type="VARCHAR(255)"/>
             <column name="name" type="VARCHAR(255)"/>

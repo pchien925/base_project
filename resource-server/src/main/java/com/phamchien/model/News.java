@@ -12,7 +12,7 @@ import javax.persistence.*;
 @EntityListeners(AuditingEntityListener.class)
 @Getter
 @Setter
-public class News extends Auditable<String> {
+public class News extends Auditable<String, Long> {
     @Id
     @GenericGenerator(name = "idGenerator", strategy = "com.phamchien.service.id.IdGenerator")
     @GeneratedValue(generator = "idGenerator")

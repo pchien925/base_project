@@ -3,6 +3,6 @@ package com.phamchien.model;
 import lombok.Data;
 
 @Data
-public class ReuseId {
-    public Long reusedId;
+public class ReuseId<U> {
+    public U reusedId;
 }

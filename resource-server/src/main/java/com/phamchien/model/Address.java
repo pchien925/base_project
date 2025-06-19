@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "db_user_base_address")
-public class Address extends Auditable<String>{
+public class Address extends Auditable<String, Long>{
     @Id
     @GenericGenerator(name = "idGenerator", strategy = "com.phamchien.service.id.IdGenerator")
     @GeneratedValue(generator = "idGenerator")
